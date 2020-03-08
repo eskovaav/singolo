@@ -561,8 +561,8 @@ textarea::placeholder {
 input[type="submit"] {
     color: #f0d8d9;
     width: 100px;
-    padding: inherit;
-    margin-top: 10px;
+    padding: 10px;
+    margin: 10px 0 10px 0px;
     background-color: #2d303a;
     transition: 0.5s;
 }
