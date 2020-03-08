@@ -1,0 +1,222 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+section, footer {
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+.get-a-quote {
+    background-color: #f06c64;
+    height: 655px;
+    box-sizing: border-box;
+    border-bottom: 5px solid #ea676b;
+}
+.get-a-quote-description {
+    padding-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: -5px;
+}
+.get-a-quote-description h2 {
+    font-family: 'Lato-Black', sans-serif;
+    letter-spacing: 0px;
+    word-spacing: -1px;
+    font-size: 30px;
+    line-height: 17.86px;
+    margin-top: 0;
+    color: #f0d8d9;
+    padding-bottom: 0;
+    margin-bottom: 25px;
+}
+.description {
+    font-family: 'Lato-Light' sans-serif;
+    letter-spacing: 0px;
+    word-spacing: -1px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    color: #f0d8d9;
+    padding: 0;
+    margin: 0;
+}
+.form-and-contacts {
+    display: grid;
+    display: grid;
+    grid-template-columns: 620px 300px;
+    grid-template-rows: 364px;
+    grid-gap: 20px;
+    padding: 50px 40px 0;
+}
+input {
+    box-sizing: border-box;
+    height: 38px;
+    width: 618px;
+    color: #f0d8d9;
+    background-color: #d6564f;
+    border-style: none;
+    border-radius: 5px;
+    margin: 0 0 16px;
+    padding: 0 0 0 15px;
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    font-family: 'Lato-Regular';
+    font-size: 12px;
+    color: #f48c8f;
+    padding: 16px 0;
+}
+input[type="submit"] {
+    color: #f0d8d9;
+    width: 100px;
+    padding: inherit;
+    margin-top: 10px;
+    background-color: #2d303a;
+    transition: 0.5s;
+}
+input[type="submit"]:hover {
+    cursor: pointer;
+    border: 1px solid #f0d8d9;
+}
+/* textarea {
+    box-sizing: border-box;
+    width: 618px;
+    height: 203px;
+    color: #f48c8f;
+    background-color: #d6564f;
+    border-style: none;
+    border-radius: 5px;
+    margin: 0;
+    resize: none;
+    padding-left: 15px;
+} */
+textarea {
+    box-sizing: border-box;
+    width: 618px;
+    height: 203px;
+    color: #f0d8d9;
+    background-color: #d6564f;
+    border-style: none;
+    border-radius: 5px;
+    margin: 0;
+    resize: none;
+    padding-left: 15px;
+    padding-top: 11px;
+}
+textarea::placeholder {
+    padding-top: 0px;
+}
+.contact-information {
+    margin: 2px 0 0 1px;
+    padding: 0;
+}
+.contact-information h3 {
+    font-family: 'Lato-Black';
+    font-size: 18px;
+    line-height: 17.86px;
+    color: #f0d8d9;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+.contact-description, .contacts{
+    font-family: 'Lato-Regular';
+    font-size: 12px;
+    line-height: 21.56px;
+    text-align: justify;
+    color: #f0d8d9;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+    word-spacing: -2px;
+}
+.address, .tel, .email{
+    padding: 0;
+    margin: 0;
+}
+.tel a,
+.email a {
+    text-decoration: none;
+    color: #f0d8d9;
+}
+.tel a:hover,
+.email a:hover {
+    text-decoration: underline;
+}
+.contacts {
+    position: relative;
+    list-style: none;
+    padding: 24px 0 0 23px;
+    margin: 0;
+    letter-spacing: 0;
+    word-spacing: -1px;
+}
+.fas {
+    font-size: 11px;
+    padding-right: 12px;
+    margin-left: -21px;
+}
+li, i {
+    display: inline-block;
+}
+.footer {
+    background-color: #2d303a;
+    height: 76px;
+    position: relative;
+}
+.persons-icons {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: -8px;
+    right: 40px;
+}
+.icons {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+.icons li {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+}
+.icons li:hover {
+    cursor: pointer;
+}
+
+.facebook {
+    background-image: url(assets/Facebook.png);
+    background-repeat: no-repeat;
+}
+.google {
+    background-image: url(assets/Google.png);
+    background-repeat: no-repeat;
+}
+.twitter {
+    background-image: url(assets/Twitter.png);
+    background-repeat: no-repeat;
+}
+.linkedin {
+    background-image: url(assets/LinkedIn.png);
+    background-repeat: no-repeat;
+}
+.icons a {
+    padding: 0;
+}
+.icons a:not(:first-child) {
+    margin: 0 0 0 4px
+}
+.copyright {
+    font-family: 'Lato-Regular';
+    font-size: 12px;
+    color: #667d89;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
