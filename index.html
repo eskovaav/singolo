@@ -18,25 +18,30 @@
           </div>
             <nav class="header-navigation">
                 <ul class="header-menu">
-                    <li><a href="#">Home</a></li>
+                    <li class="header-list-item"><a href="#">Home</a></li>
                     <li>·</li>
-                    <li><a href="#">Services</a></li>
+                    <li class="header-list-item"><a href="#services">Services</a></li>
                     <li>·</li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li class="header-list-item"><a href="#portfolio">Portfolio</a></li>
                     <li>·</li>
-                    <li><a href="#">About</a></li>
+                    <li class="header-list-item"><a href="#about">About</a></li>
                     <li>·</li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="header-list-item"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
-    <section class="slider">
-        <div class="iphone-vertical"></div>
-        <div class="iphone-horiz"></div>
+    <section class="sliders">
+        <article class="slider-1">
+            <div class="iphone-vertical"></div>
+            <div class="iphone-horiz"></div>
+        </article>
+        <article class="slider-2">
+            <div class="iphone-vert-3"></div>
+        </article>
         <div class="arrow-left"></div>
         <div class="arrow-right"></div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <article class="description">
             <h2>Our Services</h2>
             <div class="description-text"> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
@@ -85,7 +90,7 @@
                 </div>                     
         </article>
     </section>
-    <section class="section portfolio">
+    <section class="section portfolio" id="portfolio">
         <article class="portfolio-categories">
             <div class="portfolio-text-block">
                 <h2>Portfolio</h2>
@@ -95,18 +100,10 @@
             </div>
             <div class="porfolio-menu">
                 <ul class="menu-points">
-                    <li><a href="#">
-                            <div class="portfolio-button">All</div>
-                        </a></li>
-                    <li><a href="#">
-                            <div class="portfolio-button">Web Design</div>
-                        </a></li>
-                    <li><a href="#">
-                            <div class="portfolio-button">Graphic Design</div>
-                        </a></li>
-                    <li><a href="#">
-                            <div class="portfolio-button">Artwork</div>
-                        </a></li>
+                    <li><div class="portfolio-button">All</div></li>
+                    <li><div class="portfolio-button">Web Design</div></li>
+                    <li><div class="portfolio-button">Graphic Design</div></li>
+                    <li><div class="portfolio-button">Artwork</div></li>
                 </ul>
             </div>
         </article>
@@ -125,7 +122,7 @@
             <div class="pic pic-12"></div>
         </article>
     </section>
-    <section class="section about-us">
+    <section class="section about-us" id="about">
         <article class="au-descritpion">
             <div class="au-text-block">
                 <h2>About Us</h2>
@@ -183,7 +180,7 @@
             </div>
         </article>
     </section>
-        <section class="get-a-quote">
+        <section class="get-a-quote" id="contact">
             <article class="get-a-quote-description">
                 <h2>Get a Quote</h2>
                 <div class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
@@ -192,9 +189,9 @@
                 <form method="GET" class="quote-form">
                     <input type="text" name="username" id="name" required placeholder="Name (Required)"><br>
                     <input type="email" id="u-email" required placeholder="Email (Required)"><br>
-                    <input type="text" placeholder="Subject">
-                    <textarea id="project-describe" placeholder="Describe your project in detail&#8230;"></textarea>
-                    <input type="submit" value="Submit">
+                    <input type="text" placeholder="Subject" class="subject">
+                    <textarea id="project-describe" placeholder="Describe your project in detail&#8230;" class="textarea"></textarea>
+                    <input type="submit" value="Submit" class="popup-open">
                 </form>
                 <div class="contact-information">
                     <h3>Contact Information</h3>
@@ -205,7 +202,15 @@
                         <i class="fas fa-envelope"></i><li class="email"><a href="mailto:info@singolo.com">info@singolo.com</a></li><br>
                     </ul>
                 </div>
-            </article>
+                <div class="popup">
+                    <div class="popup-info">
+                        <p>Письмо отправлено</p><br><hr>
+                        <p class="popup-theme"></p><br>
+                        <p class="popup-decription"></p><br>
+                        <button value="ok" class="popup-close">OK</button>
+                    </div>
+                </section>
+            </div>
         </section>
         <footer class="footer">
             <div class="copyright">&#169 Copyright 2013</div>
@@ -219,5 +224,6 @@
             </div>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
