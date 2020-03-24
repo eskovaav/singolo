@@ -57,10 +57,6 @@ main {
 .header-navigation {
     box-sizing: border-box;
 }
-/* .menu-active {
-
-    border-bottom: 2px solid #d6564f;
-} */
 .header-menu {
     list-style: none;
     margin: auto;
@@ -101,18 +97,21 @@ main {
 /* стилизация слайдера */
 .sliders {
     display: grid;
+    grid-template-columns: 1020px 1020px;
+    grid-template-rows: 600px;
     position: relative;
     max-width: 1020px;
+    overflow: hidden;
     height: 600px;
-    background-color: #f06c64;
     margin: auto;
     box-sizing: border-box;
     border-bottom: 5px solid #ea676b;
 }
 .slider-1 {
+    display: block;
     height: 600px;
-    max-width: 400px;
-    overflow: hidden;
+    max-width: 1020px;
+    background-color: #f06c64;
 }
 .iphone-vertical {
     position: absolute;
@@ -133,6 +132,7 @@ main {
     right: 111px;
 }
 .arrow-left {
+    z-index: 1000;
     position: absolute;
     width: 16px;
     height: 27px;
@@ -141,6 +141,7 @@ main {
     left: 42px;
 }
 .arrow-right {
+    z-index: 1000;
     position: absolute;
     width: 16px;
     height: 27px;
@@ -151,6 +152,11 @@ main {
 .arrow-left:hover,
 .arrow-right:hover {
     cursor: pointer;
+}
+.slider-2 {
+    height: 600px;
+    max-width: 1020px;
+    background-image: url(assets/slider-2.png);
 }
 
 /* стилизация services */
