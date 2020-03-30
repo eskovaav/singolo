@@ -1013,6 +1013,9 @@ textarea:hover {
         padding: 0 35px 0 25px;
         margin-top: 25px;
     }
+    .tag {
+        margin: 5px 0 0 0;
+    }
     .columns_item-pic {
         background-size: cover;
     }
@@ -1094,7 +1097,12 @@ textarea:hover {
         display: none;
     }
     .footer__icons {
-        margin-top: 20px;
-        margin-left: 25%;
+        margin: 20px auto 0 auto;
+    }
+}
+@media screen and (max-width: 350px) {
+    .tag {
+        margin: 5px 0 0 0;
+        font-size: 1rem;
     }
 }
