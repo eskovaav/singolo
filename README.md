@@ -1,1 +1,1 @@
-# singolo
+# https://eskovaav.github.io/singolo/
