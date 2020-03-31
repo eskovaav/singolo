@@ -1,4 +1,5 @@
 /* ----------SLIDER---------- */
+
 let sliderWrapper = document.querySelector('.slider__content');
 console.log(sliderWrapper);
 
@@ -53,28 +54,82 @@ let doSlide = function(direction) {
 } 
 
 /* ----------PORTFOLIO---------- */
-let portfolioMenu = document.querySelector('.portfolio__tags')
-let portfolioMenuItems = portfolioMenu.querySelectorAll('.tag');
-let picsBlock = document.querySelectorAll('.portfolio__columns');
-let pics = picsBlock.children;
 
-portfolioMenu.addEventListener('click', function(evt) {
-   
-    for (let j = 0; j < portfolioMenuItems.length; j++) {
-        portfolioMenuItems[j].classList.remove('tag_active');
-        picsBlock.appendChild(pics[0]);
-    }
-    evt.target.classList.add('tag_active');
-});
+let addBorderPortfolioTags = function() {
+    let tagContainer = document.querySelector('.portfolio__tags');
+    let tags = tagContainer.querySelectorAll('.tag');
+    let portfolioBlock = document.querySelector('.portfolio__columns');
+    let columnsItems = portfolioBlock.children;
+    console.log(columnsItems);
+    
+    tagContainer.addEventListener('click', function(event) {
+        for (i = 0; i < tags.length; i++) {
+            tags[i].classList.remove('tag_active');
+            portfolioBlock.appendChild(columnsItems[0]);;
+        }
+        event.target.classList.add('tag_active');
+    });
+};
+addBorderPortfolioTags();
 
-picsBlock.addEventListener('click', function(evt) {
-    for (let k = 0; k < pics.length; k++) {
-        pics[k].classList.remove('columns_item-pic_active');
-    }
+let addBorderPortfolio = function() {
+    let portfolioBlock = document.querySelector('.portfolio__columns');
+    let columnsItems = portfolioBlock.querySelectorAll('.columns_item-pic');
+    
+    portfolioBlock.addEventListener('click', function(event) {
+        for (let i = 0; i < columnsItems.length; i++) {
+            columnsItems[i].classList.remove('columns_item_active');
+        }
+        event.target.classList.add('columns_item_active');
+        if (event.target == portfolioBlock) {
+            portfolioBlock.classList.remove('columns_item_active');
+        }   
+    });
+};
+addBorderPortfolio();
 
-    evt.target.classList.add('columns_item-pic_active');
-    if (evt.target == picsBlock) {
-        picsBlock.classList.remove('columns_item-pic_active');
-    }
-    evt.stopPropagation();
-});
+let showPopup = function () {
+    let popup = document.querySelector('.popup');
+    let openPopupButton = document.querySelector('.popup-open');
+    let closePopupButton = popup.querySelector('.popup-close');
+    openPopupButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        popup.style.visibility = 'visible';
+
+        let popupTheme = popup.querySelector('.popup__theme');
+        let decriptionText = popup.querySelector('.popup__decription');
+        let textSubject = document.querySelector('#subject').value;
+        let textareaText = document.querySelector('.textarea').value;
+
+        if (textSubject) {
+            popupTheme.textContent = 'Тема: ' + textSubject
+        } else {
+            popupTheme.textContent = 'Без темы';
+        }
+    
+        if (textareaText) {
+            decriptionText.textContent = 'Описание: ' + textareaText
+        } else {
+            decriptionText.textContent = 'Без описания';
+        }
+    });
+      
+    closePopupButton.addEventListener('click', function () {
+        popup.style.visibility = 'hidden';
+        document.querySelector('#name').value = '';
+        document.querySelector('#email').value = '';
+        document.querySelector('#subject').value = '';
+        document.querySelector('.textarea').value = '';
+    });
+
+    document.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 27) {
+            popup.style.visibility = 'hidden';
+            document.querySelector('#name').value = '';
+            document.querySelector('#email').value = '';
+            document.querySelector('#subject').value = '';
+            document.querySelector('.textarea').value = '';
+        }
+    });
+};
+showPopup();
